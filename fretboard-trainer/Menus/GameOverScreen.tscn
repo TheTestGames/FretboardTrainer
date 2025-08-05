@@ -1,0 +1,156 @@
+[gd_scene load_steps=8 format=3 uid="uid://btd425svqih3i"]
+
+[ext_resource type="Script" path="res://Menus/game_over_screen.gd" id="1_mtmqg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64cpx"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ss6sf"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ut8xj"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyuxu"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bw150"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bx1ks"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mtmqg")
+
+[node name="TimesUpLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TimesUpLabel" type="Label" parent="TimesUpLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 98
+text = "Time's up!"
+
+[node name="TimesUpTimer" type="Timer" parent="TimesUpLayer/TimesUpLabel"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="GameOverLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameOverLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 80
+
+[node name="ScoreLabel" type="Label" parent="GameOverLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Score: 0"
+
+[node name="WrongLabel" type="Label" parent="GameOverLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Wrong: 0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GameOverLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_constants/separation = 95
+
+[node name="PlayAgain" type="Button" parent="GameOverLayer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxFlat_64cpx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ss6sf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ut8xj")
+text = "Play
+ Again "
+
+[node name="MainMenu" type="Button" parent="GameOverLayer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxFlat_jyuxu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bw150")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bx1ks")
+text = "Main
+ Menu "
+
+[connection signal="timeout" from="TimesUpLayer/TimesUpLabel/TimesUpTimer" to="." method="_on_times_up_timer_timeout"]
+[connection signal="pressed" from="GameOverLayer/VBoxContainer/HBoxContainer2/PlayAgain" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="GameOverLayer/VBoxContainer/HBoxContainer2/MainMenu" to="." method="_on_main_menu_pressed"]

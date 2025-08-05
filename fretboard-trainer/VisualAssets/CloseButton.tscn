@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bslhm61h8k5hp"]
+
+[ext_resource type="Script" path="res://VisualAssets/close_button.gd" id="1_e7bib"]
+[ext_resource type="Texture2D" uid="uid://bmkals7nfd5k8" path="res://VisualAssets/X Icon.png" id="1_sj3ro"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s52fa"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="CloseButton" type="Button"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -512.0
+offset_bottom = 512.0
+grow_horizontal = 0
+theme_override_styles/focus = SubResource("StyleBoxFlat_s52fa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s52fa")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s52fa")
+icon = ExtResource("1_sj3ro")
+script = ExtResource("1_e7bib")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

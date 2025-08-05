@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4880abmsfgh4"]
+
+[ext_resource type="Script" path="res://VisualAssets/note_button.gd" id="1_bako7"]
+[ext_resource type="Theme" uid="uid://dtx0ukrc8j6tp" path="res://VisualAssets/note_button_theme.tres" id="1_vrtyf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s52fa"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="NoteButton" type="Button"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.5
+offset_top = -11.5
+offset_right = 30.535
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.75, 1.75)
+theme = ExtResource("1_vrtyf")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_s52fa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s52fa")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s52fa")
+text = "----"
+script = ExtResource("1_bako7")
+note_value = 1

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwuencskvcfp7"]
+
+[ext_resource type="Texture2D" uid="uid://b5al8s07cfipe" path="res://VisualAssets/Pause Icon.png" id="1_5clx0"]
+[ext_resource type="Script" path="res://VisualAssets/pause_button.gd" id="2_0n4ve"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s52fa"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="PauseButton" type="Button"]
+offset_top = -2.0
+offset_right = 520.0
+offset_bottom = 518.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_s52fa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s52fa")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s52fa")
+icon = ExtResource("1_5clx0")
+script = ExtResource("2_0n4ve")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

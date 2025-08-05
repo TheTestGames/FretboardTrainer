@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://uxsqga31pk0i"]
+
+[ext_resource type="Script" path="res://Game/string_number.gd" id="1_hqja2"]
+
+[node name="StringNumber" type="Node"]
+script = ExtResource("1_hqja2")
+string_id = 1

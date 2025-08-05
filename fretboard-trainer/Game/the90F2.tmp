@@ -1,0 +1,118 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxbr2gbqtkme0"]
+
+[ext_resource type="Script" path="res://Game/the_game.gd" id="1_828mv"]
+[ext_resource type="Texture2D" uid="uid://b1p5er0fcc0nk" path="res://VisualAssets/Probably The One final.png" id="2_offhj"]
+[ext_resource type="PackedScene" uid="uid://do80pjf0b03pi" path="res://Game/note_dot.tscn" id="3_yi2cu"]
+
+[node name="TheGame" type="Node2D"]
+script = ExtResource("1_828mv")
+
+[node name="FretboardSprite" type="Sprite2D" parent="."]
+position = Vector2(623.638, 171.855)
+rotation = -0.0174533
+scale = Vector2(0.321956, 0.444104)
+texture = ExtResource("2_offhj")
+
+[node name="A_Whole" type="Node" parent="FretboardSprite"]
+
+[node name="NoteDot" parent="FretboardSprite/A_Whole" instance=ExtResource("3_yi2cu")]
+position = Vector2(549, 253)
+note_id = 1
+
+[node name="NoteDot2" parent="FretboardSprite/A_Whole" instance=ExtResource("3_yi2cu")]
+position = Vector2(18, 209)
+note_id = 1
+
+[node name="NoteDot3" parent="FretboardSprite/A_Whole" instance=ExtResource("3_yi2cu")]
+position = Vector2(1086, 229)
+note_id = 1
+
+[node name="NoteDot4" parent="FretboardSprite/A_Whole" instance=ExtResource("3_yi2cu")]
+position = Vector2(732, 187)
+note_id = 1
+
+[node name="NoteDot5" parent="FretboardSprite/A_Whole" instance=ExtResource("3_yi2cu")]
+position = Vector2(255, 150)
+note_id = 1
+
+[node name="NoteDot6" parent="FretboardSprite/A_Whole" instance=ExtResource("3_yi2cu")]
+position = Vector2(957, 115)
+note_id = 1
+
+[node name="NoteDot7" parent="FretboardSprite/A_Whole" instance=ExtResource("3_yi2cu")]
+position = Vector2(560, 83)
+note_id = 1
+
+[node name="B_Flat" type="Node" parent="FretboardSprite"]
+
+[node name="NoteDot" parent="FretboardSprite/B_Flat" instance=ExtResource("3_yi2cu")]
+position = Vector2(634, 257)
+note_id = 2
+
+[node name="NoteDot2" parent="FretboardSprite/B_Flat" instance=ExtResource("3_yi2cu")]
+position = Vector2(145, 214)
+note_id = 2
+
+[node name="NoteDot3" parent="FretboardSprite/B_Flat" instance=ExtResource("3_yi2cu")]
+position = Vector2(815, 187)
+note_id = 2
+
+[node name="NoteDot4" parent="FretboardSprite/B_Flat" instance=ExtResource("3_yi2cu")]
+position = Vector2(370, 150)
+note_id = 2
+
+[node name="NoteDot5" parent="FretboardSprite/B_Flat" instance=ExtResource("3_yi2cu")]
+position = Vector2(1024, 115)
+note_id = 2
+
+[node name="NoteDot6" parent="FretboardSprite/B_Flat" instance=ExtResource("3_yi2cu")]
+position = Vector2(648, 80)
+note_id = 2
+
+[node name="B_Whole" type="Node" parent="FretboardSprite"]
+
+[node name="NoteDot" parent="FretboardSprite/B_Whole" instance=ExtResource("3_yi2cu")]
+position = Vector2(733, 258)
+note_id = 3
+
+[node name="NoteDot2" parent="FretboardSprite/B_Whole" instance=ExtResource("3_yi2cu")]
+position = Vector2(266, 215)
+note_id = 3
+
+[node name="C_Whole" type="Node" parent="FretboardSprite"]
+
+[node name="C_Sharp" type="Node" parent="FretboardSprite"]
+
+[node name="D_Whole" type="Node" parent="FretboardSprite"]
+
+[node name="E_Flat" type="Node" parent="FretboardSprite"]
+
+[node name="E_Whole" type="Node" parent="FretboardSprite"]
+
+[node name="F_Whole" type="Node" parent="FretboardSprite"]
+
+[node name="F_Sharp" type="Node" parent="FretboardSprite"]
+
+[node name="G_Whole" type="Node" parent="FretboardSprite"]
+
+[node name="G_Sharp" type="Node" parent="FretboardSprite"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.497474, 0.497474, 0.497474, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.144063, 0.144063, 0.144063, 1)

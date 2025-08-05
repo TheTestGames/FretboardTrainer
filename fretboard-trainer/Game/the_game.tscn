@@ -1,0 +1,608 @@
+[gd_scene load_steps=11 format=3 uid="uid://cxbr2gbqtkme0"]
+
+[ext_resource type="Script" path="res://Game/the_game.gd" id="1_828mv"]
+[ext_resource type="Texture2D" uid="uid://b1p5er0fcc0nk" path="res://VisualAssets/Probably The One final.png" id="2_offhj"]
+[ext_resource type="PackedScene" uid="uid://uxsqga31pk0i" path="res://Game/string_number.tscn" id="3_k7vyb"]
+[ext_resource type="PackedScene" uid="uid://do80pjf0b03pi" path="res://Game/note_dot.tscn" id="4_wb0t5"]
+[ext_resource type="PackedScene" uid="uid://b4880abmsfgh4" path="res://VisualAssets/note_button.tscn" id="5_cfk7y"]
+[ext_resource type="PackedScene" uid="uid://bwuencskvcfp7" path="res://VisualAssets/PauseButton.tscn" id="5_vdo01"]
+[ext_resource type="PackedScene" uid="uid://buamtpwcfeg7c" path="res://Menus/PauseMenu.tscn" id="6_1uocf"]
+[ext_resource type="PackedScene" uid="uid://dvys8ofv7gpjj" path="res://Menus/ready_menu.tscn" id="6_ejfp3"]
+[ext_resource type="AudioStream" uid="uid://dedibq1bu5f6l" path="res://Noises/ding.mp3" id="7_8227w"]
+[ext_resource type="AudioStream" uid="uid://btw0qyunei67x" path="res://Noises/bzzt.mp3" id="8_jb4nm"]
+
+[node name="the_game" type="Node2D"]
+script = ExtResource("1_828mv")
+
+[node name="FretboardSprite" type="Sprite2D" parent="."]
+position = Vector2(623.638, 171.855)
+rotation = -0.0174533
+scale = Vector2(0.321956, 0.444104)
+texture = ExtResource("2_offhj")
+
+[node name="String1" parent="FretboardSprite" instance=ExtResource("3_k7vyb")]
+
+[node name="E0-E" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(19, 242)
+note_id = 8
+
+[node name="E1-F" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(149, 245)
+note_id = 9
+fret_id = 1
+
+[node name="E2-Fsharp" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(261, 250)
+note_id = 10
+fret_id = 2
+
+[node name="E3-G" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(370, 251)
+note_id = 11
+fret_id = 3
+
+[node name="E4-Gsharp" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(468, 252)
+note_id = 12
+fret_id = 4
+
+[node name="E5-A" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(563, 254)
+fret_id = 5
+
+[node name="E6-Bflat" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(650, 257)
+note_id = 2
+fret_id = 6
+
+[node name="E7-B" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(734, 258)
+note_id = 3
+fret_id = 7
+
+[node name="E8-C" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(813, 261)
+note_id = 4
+fret_id = 8
+
+[node name="E9-Csharp" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(888, 263)
+note_id = 5
+fret_id = 9
+
+[node name="E10-D" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(957, 265)
+note_id = 6
+fret_id = 10
+
+[node name="E11-Eflat" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(1025, 264)
+note_id = 7
+fret_id = 11
+
+[node name="E12-E" parent="FretboardSprite/String1" instance=ExtResource("4_wb0t5")]
+position = Vector2(1087, 265)
+note_id = 8
+fret_id = 12
+
+[node name="String2" parent="FretboardSprite" instance=ExtResource("3_k7vyb")]
+string_id = 2
+
+[node name="A0-A" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(19, 212)
+
+[node name="A1-Bflat" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(150, 212)
+note_id = 2
+fret_id = 1
+
+[node name="A2-B" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(266, 214)
+note_id = 3
+fret_id = 2
+
+[node name="A3-C" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(373, 214)
+note_id = 4
+fret_id = 3
+
+[node name="A4-Csharp" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(471, 217)
+note_id = 5
+fret_id = 4
+
+[node name="A5-D" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(565, 218)
+note_id = 6
+fret_id = 5
+
+[node name="A6-Eflat" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(653, 219)
+note_id = 7
+fret_id = 6
+
+[node name="A7-E" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(737, 221)
+note_id = 8
+fret_id = 7
+
+[node name="A8-F" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(813, 221)
+note_id = 9
+fret_id = 8
+
+[node name="A9-Fsharp" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(888, 224)
+note_id = 10
+fret_id = 9
+
+[node name="A10-G" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(956, 225)
+note_id = 11
+fret_id = 10
+
+[node name="A11-Gsharp" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(1022, 227)
+note_id = 12
+fret_id = 11
+
+[node name="A12-A" parent="FretboardSprite/String2" instance=ExtResource("4_wb0t5")]
+position = Vector2(1087, 228)
+fret_id = 12
+
+[node name="String3" parent="FretboardSprite" instance=ExtResource("3_k7vyb")]
+string_id = 3
+
+[node name="D0-D" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(20, 181)
+note_id = 6
+
+[node name="D1-Eflat" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(150, 182)
+note_id = 7
+fret_id = 1
+
+[node name="D2-E" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(262, 181)
+note_id = 8
+fret_id = 2
+
+[node name="D3-F" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(372, 183)
+note_id = 9
+fret_id = 3
+
+[node name="D4-Fsharp" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(472, 181)
+note_id = 10
+fret_id = 4
+
+[node name="D5-G" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(562, 185)
+note_id = 11
+fret_id = 5
+
+[node name="D6-Gsharp" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(653, 185)
+note_id = 12
+fret_id = 6
+
+[node name="D7-A" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(738, 186)
+fret_id = 7
+
+[node name="D8-Bflat" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(816, 186)
+note_id = 2
+fret_id = 8
+
+[node name="D9-B" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(889, 188)
+note_id = 3
+fret_id = 9
+
+[node name="D10-C" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(958, 188)
+note_id = 4
+fret_id = 10
+
+[node name="D11-Csharp" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(1027, 189)
+note_id = 5
+fret_id = 11
+
+[node name="D12-D" parent="FretboardSprite/String3" instance=ExtResource("4_wb0t5")]
+position = Vector2(1088, 189)
+note_id = 6
+fret_id = 12
+
+[node name="String4" parent="FretboardSprite" instance=ExtResource("3_k7vyb")]
+string_id = 4
+
+[node name="G0-G" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(19, 149)
+note_id = 11
+
+[node name="G1-Gsharp" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(144, 150)
+note_id = 12
+fret_id = 1
+
+[node name="G2-A" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(266, 149)
+fret_id = 2
+
+[node name="G3-Bflat" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(373, 150)
+note_id = 2
+fret_id = 3
+
+[node name="G4-B" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(475, 149)
+note_id = 3
+fret_id = 4
+
+[node name="G5-C" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(566, 148)
+note_id = 4
+fret_id = 5
+
+[node name="G6-Csharp" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(654, 149)
+note_id = 5
+fret_id = 6
+
+[node name="G7-D" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(733, 150)
+note_id = 6
+fret_id = 7
+
+[node name="G8-Eflat" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(816, 150)
+note_id = 7
+fret_id = 8
+
+[node name="G9-E" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(891, 151)
+note_id = 8
+fret_id = 9
+
+[node name="G10-F" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(959, 151)
+note_id = 9
+fret_id = 10
+
+[node name="G11-Fsharp" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(1028, 151)
+note_id = 10
+fret_id = 11
+
+[node name="G12-G" parent="FretboardSprite/String4" instance=ExtResource("4_wb0t5")]
+position = Vector2(1089, 152)
+note_id = 11
+fret_id = 12
+
+[node name="String5" parent="FretboardSprite" instance=ExtResource("3_k7vyb")]
+string_id = 5
+
+[node name="B0-B" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(20, 116)
+note_id = 3
+
+[node name="B1-C" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(147, 118)
+note_id = 4
+fret_id = 1
+
+[node name="B2-Csharp" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(256, 117)
+note_id = 5
+fret_id = 2
+
+[node name="B3-D" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(363, 117)
+note_id = 6
+fret_id = 3
+
+[node name="B4-Eflat" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(464, 116)
+note_id = 7
+fret_id = 4
+
+[node name="B5-E" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(558, 116)
+note_id = 8
+fret_id = 5
+
+[node name="B6-F" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(647, 114)
+note_id = 9
+fret_id = 6
+
+[node name="B7-Fsharp" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(732, 113)
+note_id = 10
+fret_id = 7
+
+[node name="B8-G" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(809, 114)
+note_id = 11
+fret_id = 8
+
+[node name="B9-Gsharp" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(885, 114)
+note_id = 12
+fret_id = 9
+
+[node name="B10-A" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(956, 114)
+fret_id = 10
+
+[node name="B11-Bflat" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(1022, 115)
+note_id = 2
+fret_id = 11
+
+[node name="B12-B" parent="FretboardSprite/String5" instance=ExtResource("4_wb0t5")]
+position = Vector2(1085, 112)
+note_id = 3
+fret_id = 12
+
+[node name="String6" parent="FretboardSprite" instance=ExtResource("3_k7vyb")]
+string_id = 6
+
+[node name="HE0-E" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(18, 87)
+note_id = 8
+
+[node name="HE1-F" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(140, 87)
+note_id = 9
+fret_id = 1
+
+[node name="HE2-Fsharp" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(258, 87)
+note_id = 10
+fret_id = 2
+
+[node name="HE3-G" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(368, 85)
+note_id = 11
+fret_id = 3
+
+[node name="HE4-Gsharp" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(467, 82)
+note_id = 12
+fret_id = 4
+
+[node name="HE5-A" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(556, 82)
+fret_id = 5
+
+[node name="HE6-Bflat" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(648, 81)
+note_id = 2
+fret_id = 6
+
+[node name="HE7-B" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(732, 80)
+note_id = 3
+fret_id = 7
+
+[node name="HE8-C" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(811, 79)
+note_id = 4
+fret_id = 8
+
+[node name="HE9-Csharp" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(885, 78)
+note_id = 5
+fret_id = 9
+
+[node name="HE10-D" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(954, 77)
+note_id = 6
+fret_id = 10
+
+[node name="HE11-Eflat" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(1020, 77)
+note_id = 7
+fret_id = 11
+
+[node name="HE12-E" parent="FretboardSprite/String6" instance=ExtResource("4_wb0t5")]
+position = Vector2(1081, 76)
+note_id = 8
+fret_id = 12
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="PauseButton" parent="UILayer" instance=ExtResource("5_vdo01")]
+offset_top = 0.0
+offset_bottom = 520.0
+scale = Vector2(0.125, 0.125)
+
+[node name="PauseMenu" parent="UILayer" instance=ExtResource("6_1uocf")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.497474, 0.497474, 0.497474, 1)
+
+[node name="ButtonContainer" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.144063, 0.144063, 0.144063, 1)
+
+[node name="A-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = -557.0
+offset_top = -125.0
+offset_right = -521.0
+offset_bottom = -102.0
+text = "A"
+
+[node name="Bb-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = -471.0
+offset_top = -46.0
+offset_right = -435.0
+offset_bottom = -23.0
+text = "B♭"
+note_value = 2
+
+[node name="B-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = -386.0
+offset_top = -125.0
+offset_right = -350.0
+offset_bottom = -102.0
+text = "B"
+note_value = 3
+
+[node name="C-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = -285.0
+offset_top = -123.0
+offset_right = -249.0
+offset_bottom = -100.0
+text = "C"
+note_value = 4
+
+[node name="C#-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = -203.0
+offset_top = -46.0
+offset_right = -167.0
+offset_bottom = -23.0
+text = "C#"
+note_value = 5
+
+[node name="D-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = -123.0
+offset_top = -119.0
+offset_right = -87.0
+offset_bottom = -96.0
+text = "D"
+note_value = 6
+
+[node name="Eb-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = -27.9999
+offset_top = -44.0
+offset_right = 8.00006
+offset_bottom = -21.0
+text = "E♭"
+note_value = 7
+
+[node name="E-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = 63.0001
+offset_top = -119.0
+offset_right = 99.0001
+offset_bottom = -96.0
+text = "E"
+note_value = 8
+
+[node name="F-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = 163.0
+offset_top = -119.0
+offset_right = 199.0
+offset_bottom = -96.0
+text = "F"
+note_value = 9
+
+[node name="F#-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = 250.0
+offset_top = -48.0
+offset_right = 286.0
+offset_bottom = -25.0
+text = "F#"
+note_value = 10
+
+[node name="G-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = 334.0
+offset_top = -122.0
+offset_right = 370.0
+offset_bottom = -99.0
+text = "G"
+note_value = 11
+
+[node name="G#-Button" parent="CanvasLayer/ButtonContainer" instance=ExtResource("5_cfk7y")]
+layout_mode = 1
+offset_left = 425.0
+offset_top = -49.0
+offset_right = 461.0
+offset_bottom = -26.0
+text = "G#"
+note_value = 12
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="ReadyMenu" parent="CanvasLayer2" instance=ExtResource("6_ejfp3")]
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer3"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "Score:"
+
+[node name="WrongLabel" type="Label" parent="CanvasLayer3"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "Wrong: "
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer3"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "Time:"
+
+[node name="GameTimer" type="Timer" parent="."]
+
+[node name="DingPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_8227w")
+
+[node name="BzztPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_jb4nm")
+
+[connection signal="countdown_finished" from="CanvasLayer2/ReadyMenu" to="." method="_on_ready_menu_countdown_finished"]
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

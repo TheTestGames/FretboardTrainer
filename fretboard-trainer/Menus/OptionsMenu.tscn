@@ -1,0 +1,133 @@
+[gd_scene load_steps=6 format=3 uid="uid://dabnjby35pgpp"]
+
+[ext_resource type="Script" path="res://Menus/options_menu.gd" id="1_3yofp"]
+[ext_resource type="Texture2D" uid="uid://bmkals7nfd5k8" path="res://VisualAssets/X Icon.png" id="2_s5kmk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jixq5"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 6.0
+expand_margin_top = 4.0
+expand_margin_right = 6.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h04io"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3aemt"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3yofp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.5
+offset_top = -113.0
+offset_right = 351.5
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 35
+
+[node name="RoundLength" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "Round Length"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 65
+
+[node name="SixtySec" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxFlat_jixq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jixq5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h04io")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3aemt")
+text = "60
+Seconds
+"
+
+[node name="NinetySec" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxFlat_jixq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jixq5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h04io")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3aemt")
+text = "90
+Seconds
+"
+
+[node name="HundredTwentySec" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxFlat_jixq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jixq5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h04io")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3aemt")
+text = "120
+Seconds
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+offset_right = 712.0
+offset_bottom = 712.0
+scale = Vector2(0.15, 0.15)
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="BackButton" type="Button" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_jixq5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h04io")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3aemt")
+icon = ExtResource("2_s5kmk")
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer/SixtySec" to="." method="_on_sixty_sec_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer/NinetySec" to="." method="_on_ninety_sec_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer/HundredTwentySec" to="." method="_on_hundred_twenty_sec_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/BackButton" to="." method="_on_back_button_pressed"]

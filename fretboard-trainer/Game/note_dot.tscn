@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://do80pjf0b03pi"]
+
+[ext_resource type="Script" path="res://Game/note_dot.gd" id="1_3iwch"]
+[ext_resource type="Texture2D" uid="uid://b7dxnv0ij1yh5" path="res://icon.svg" id="1_h87t2"]
+
+[node name="NoteDot" type="Sprite2D"]
+visible = false
+position = Vector2(0, -3)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_h87t2")
+script = ExtResource("1_3iwch")
